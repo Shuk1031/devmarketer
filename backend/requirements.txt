@@ -1,0 +1,41 @@
+fastapi==0.95.* 
+uvicorn==0.22.*
+SQLAlchemy==2.0.*
+psycopg2==2.9.*
+redis==4.5.*
+python-dotenv==1.0.*
+openai==0.27.* 
+
+# FastAPI and server
+fastapi==0.109.2
+uvicorn==0.27.0
+pydantic==2.5.2
+pydantic-settings==2.1.0
+email-validator==2.1.0
+
+# Database
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+alembic==1.12.1
+supabase==2.1.0
+
+# Redis for scheduling
+redis==5.0.1
+hiredis==2.2.3
+rq==1.15.1
+
+# Authentication
+python-jose==3.3.0
+passlib==1.7.4
+python-multipart==0.0.6
+
+# OpenAI for GPT integration
+openai==1.13.0
+
+# HTTP client for external API calls
+httpx==0.26.0
+
+# Utilities
+python-dotenv==1.0.0
+tenacity==8.2.3
+loguru==0.7.2
