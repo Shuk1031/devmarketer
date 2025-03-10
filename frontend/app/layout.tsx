@@ -3,12 +3,13 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/layout/header';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'DevMarketer - Social Media Automation for Developers',
-  description: 'Automate your social media marketing with AI-powered content generation and scheduling.',
+  title: 'DevMarketer - Automate Your Social Media Presence',
+  description: 'AI-powered social media automation for developers',
 };
 
 export default function RootLayout({
@@ -19,8 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen bg-background">
+            <Header />
+            <main>{children}</main>
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>
